@@ -1,0 +1,108 @@
+\hypertarget{_commands_8h_source}{}\doxysection{Commands.\+h}
+\label{_commands_8h_source}\index{C:/Users/hp/Desktop/SocialNetwork/SocialNetwork/Commands.h@{C:/Users/hp/Desktop/SocialNetwork/SocialNetwork/Commands.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00002}00002 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}User.h"{}}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00006}00006 \textcolor{preprocessor}{\#include "{}Admin.h"{}}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00007}00007 \textcolor{comment}{//library needed to visualize the password as stars}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <conio.h>}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00009}00009 \textcolor{preprocessor}{\#include "{}Theme.h"{}}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00010}00010 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00011}00011 \textcolor{comment}{* The class whici is representing the engine of the programm}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00012}00012 \textcolor{comment}{* Comands here are:}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00013}00013 \textcolor{comment}{* opening a file}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00014}00014 \textcolor{comment}{* saving into same/new file}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00015}00015 \textcolor{comment}{* }}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00016}00016 \textcolor{comment}{* There will be 2 text files:}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00017}00017 \textcolor{comment}{* one with users}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00018}00018 \textcolor{comment}{* one with themes, questions and comments }}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00019}00019 \textcolor{comment}{* When open is added, only one of the things can be read}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00020}00020 \textcolor{comment}{* Òhe function open() can find out if the file contains Users, or Themes by the first row of the file}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00021}00021 \textcolor{comment}{* which contains an indication number like:}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00022}00022 \textcolor{comment}{* 1 -\/ for users}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00023}00023 \textcolor{comment}{* 2 -\/ for themes}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00024}00024 \textcolor{comment}{*}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00025}00025 \textcolor{comment}{* This method is way easier for reading data from file and the data in the files is way more organized. }}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00026}00026 \textcolor{comment}{* }}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00027}00027 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00028}00028 \textcolor{keyword}{const} \textcolor{keywordtype}{int} MAX\_CONTENT = 1000;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00029}\mbox{\hyperlink{class_commands}{00029}} \textcolor{keyword}{class }\mbox{\hyperlink{class_commands}{Commands}}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00031}00031 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00032}00032     \mbox{\hyperlink{class_commands}{Commands}}(std::string com);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00033}00033     \mbox{\hyperlink{class_commands}{Commands}}();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00034}00034     \textcolor{keywordtype}{void} load();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00035}00035     \textcolor{keywordtype}{void} close();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00036}00036     \textcolor{keywordtype}{void} save();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00037}00037     \textcolor{keywordtype}{void} exit();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00038}00038     \textcolor{keywordtype}{void} saveAs(\textcolor{keyword}{const} std::string\& newFilename);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00039}00039     \textcolor{keywordtype}{void} CreatenewFile();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00041}00041     \textcolor{comment}{//signing up the user in the system}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00042}00042     \textcolor{keywordtype}{void} signup(std::string firstName, std::string lastName, std::string userName, std::string password);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00044}00044     \textcolor{keywordtype}{void} login(std::string userName, std::string password);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00045}00045     \textcolor{keywordtype}{void} create(std::string title, std::string description);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00046}00046     \textcolor{keywordtype}{void} search(std::string titleWord);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00047}00047     \textcolor{keywordtype}{void} open(\textcolor{keywordtype}{int} num);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00048}00048     \textcolor{keywordtype}{void} open(std::string title);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00049}00049     \textcolor{keywordtype}{void} list();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00050}00050     \textcolor{keywordtype}{void} post(std::string title, std::string content);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00051}00051     \textcolor{keywordtype}{void} post\_open(\textcolor{keywordtype}{int} num);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00052}00052     \textcolor{keywordtype}{void} post\_quit();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00053}00053     \textcolor{keywordtype}{void} quit();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00054}00054     \textcolor{keywordtype}{void} logout();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00057}00057     \textcolor{keywordtype}{void} edit();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00059}00059     \textcolor{keywordtype}{void} run();}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00061}00061 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00062}00062     \textcolor{comment}{//list of all excisting users in the system}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00063}00063     std::vector <User> users;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00064}00064     \textcolor{comment}{//list of all excisting themes}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00065}00065     std::vector<Theme> themes;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00066}00066     \textcolor{comment}{//opened theme opened}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00067}00067     \mbox{\hyperlink{class_theme}{Theme}}\& opened;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00068}00068     \textcolor{comment}{//opened post}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00069}00069     \mbox{\hyperlink{class_question}{Question}}\& nowOPenedQu;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00071}00071     \textcolor{comment}{//user which is currently logged in the system}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00072}00072     \textcolor{comment}{//unfortunatelly for now there could be only one logged in user at a time}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00073}00073     \mbox{\hyperlink{class_user}{User}}\& current;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00075}00075     \textcolor{comment}{//default values to make the refferences}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00076}00076     \textcolor{comment}{//having default values to be used as references is considered better practise in OOP than using pointers}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00077}00077     \textcolor{comment}{//(in this case)}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00078}00078     \mbox{\hyperlink{class_user}{User}} defaultU;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00079}00079     \mbox{\hyperlink{class_theme}{Theme}} defaultT;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00080}00080     \mbox{\hyperlink{class_question}{Question}} defaultQ;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00082}00082     \textcolor{comment}{//a simple function that checks if a username is unique}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00083}00083     \textcolor{keywordtype}{bool} isUsernameUnique(std::string username);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00084}00084     \textcolor{comment}{//returns the index of a user with this username}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00085}00085     \textcolor{keywordtype}{int} getUserByUsername(std::string username);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00086}00086     \textcolor{comment}{//checks if a password is correct}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00087}00087     \textcolor{keywordtype}{bool} isPasswordCorrect(std::string username, std::string password);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00088}00088     \textcolor{comment}{//function to enter a crypted password}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00089}00089     \textcolor{keywordtype}{void} enterPassword(std::string password);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00090}00090     \textcolor{comment}{//a helping function to find is a string is a number}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00091}00091     \textcolor{keywordtype}{bool} is\_number(\textcolor{keyword}{const} std::string\& s);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00092}00092     \textcolor{comment}{//a simple function that checks if a title of a theme is found}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00093}00093     \textcolor{keywordtype}{bool} isTitleFound(std::string title);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00094}00094     \textcolor{comment}{//returns the index of a theme by its title}}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00095}00095     \textcolor{keywordtype}{int} getThemeByTitle(std::string title);}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00096}00096     }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00098}00098     std::string command;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00099}00099     std::string file;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00100}00100     std::fstream newFile;}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00101}00101 \};}
+\DoxyCodeLine{\Hypertarget{_commands_8h_source_l00102}00102 }
+
+\end{DoxyCode}

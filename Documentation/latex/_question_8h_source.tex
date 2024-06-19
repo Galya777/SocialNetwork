@@ -1,0 +1,49 @@
+\hypertarget{_question_8h_source}{}\doxysection{Question.\+h}
+\label{_question_8h_source}\index{C:/Users/hp/Desktop/SocialNetwork/SocialNetwork/Question.h@{C:/Users/hp/Desktop/SocialNetwork/SocialNetwork/Question.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00002}00002 \textcolor{preprocessor}{\#include "{}Comment.h"{}}}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00005}00005 \textcolor{keyword}{static} \textcolor{keywordtype}{int} QID = 0;}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00006}\mbox{\hyperlink{class_question}{00006}} \textcolor{keyword}{class }\mbox{\hyperlink{class_question}{Question}}}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00008}00008 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00009}00009     \mbox{\hyperlink{class_question}{Question}}(std::string title, std::string content, \textcolor{keywordtype}{int} asker);}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00010}00010     \mbox{\hyperlink{class_question}{Question}}();}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00012}00012     \textcolor{keywordtype}{void} addComment(\mbox{\hyperlink{class_comment}{Comment}} comment);}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00013}00013     \textcolor{keywordtype}{void} deleteComment(\textcolor{keywordtype}{int} commentId, \mbox{\hyperlink{class_user}{User}}\& author);}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00014}00014     }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00016}00016     \textcolor{comment}{//react}}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00017}00017     \textcolor{keywordtype}{void} upvoteComment(\textcolor{keywordtype}{int} commentId);}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00018}00018     \textcolor{keywordtype}{void} downvoteComment(\textcolor{keywordtype}{int} commentId);}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00021}00021     std::string getTitle() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00022}00022     \textcolor{keywordtype}{int} getUniqueQ() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00023}00023     \mbox{\hyperlink{class_comment}{Comment}} getComment(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00025}00025     \textcolor{keywordtype}{void} show() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00026}00026     \textcolor{keywordtype}{void} showComments() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00028}00028     \textcolor{keywordtype}{void} readFromFile(std::fstream\& file);}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00029}00029     \textcolor{keywordtype}{void} writeToFile(std::fstream\& file) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00031}00031     \textcolor{keywordtype}{int} findCommentIndex(\textcolor{keywordtype}{int} commentId) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00033}00033 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00034}00034     std::vector<Comment> comments;}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00036}00036     std::string title;}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00037}00037     std::string content;}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00038}00038     \textcolor{keywordtype}{int} asker;}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00039}00039     \textcolor{keywordtype}{int} uniqueQ;}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00041}00041     }
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00042}00042 \};}
+\DoxyCodeLine{\Hypertarget{_question_8h_source_l00043}00043 }
+
+\end{DoxyCode}

@@ -1,0 +1,190 @@
+\hypertarget{class_question}{}\doxysection{Question Class Reference}
+\label{class_question}\index{Question@{Question}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_question_a744a3ad85f20a5ecefe701fe985726e7}{Question}} (std\+::string title, std\+::string content, int asker)
+\item 
+void \mbox{\hyperlink{class_question_a0232f4758d6dfd792eca6c4efc0c4fd6}{add\+Comment}} (\mbox{\hyperlink{class_comment}{Comment}} comment)
+\item 
+void \mbox{\hyperlink{class_question_a6af81c3184b6b893e4e94e73ef47909f}{delete\+Comment}} (int comment\+Id, \mbox{\hyperlink{class_user}{User}} \&author)
+\item 
+void \mbox{\hyperlink{class_question_ae4c08d09b63e7909e7d89b1ddc7aeb8a}{upvote\+Comment}} (int comment\+Id)
+\item 
+void \mbox{\hyperlink{class_question_ae4114296ddb091c67fa8d38f5d8d5894}{downvote\+Comment}} (int comment\+Id)
+\item 
+std\+::string \mbox{\hyperlink{class_question_a1c22c4e4a21f8e9d8298255f2e2afa20}{get\+Title}} () const
+\item 
+int \mbox{\hyperlink{class_question_a711f632a0eb2446feff15f61428aefea}{get\+UniqueQ}} () const
+\item 
+\mbox{\hyperlink{class_comment}{Comment}} \mbox{\hyperlink{class_question_a55a06e7ed8aa9468ae8edccdbf995e7f}{get\+Comment}} (int id) const
+\item 
+void \mbox{\hyperlink{class_question_a1680a8dfef011dcf971b56ab302b3164}{show}} () const
+\item 
+void \mbox{\hyperlink{class_question_aaaa0b076b10234aad6c0b059d84ca35a}{show\+Comments}} () const
+\item 
+void \mbox{\hyperlink{class_question_ac285ea35f8d10be8c1759c11a0d621e4}{read\+From\+File}} (std\+::fstream \&file)
+\item 
+void \mbox{\hyperlink{class_question_a23b6b06d419a0dbb87b3ab041d190c51}{write\+To\+File}} (std\+::fstream \&file) const
+\item 
+int \mbox{\hyperlink{class_question_aeee3e50b3b4919f21a96e6d6e5219b80}{find\+Comment\+Index}} (int comment\+Id) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_question_8h_source_l00006}{6}} of file \mbox{\hyperlink{_question_8h_source}{Question.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_question_a744a3ad85f20a5ecefe701fe985726e7}\label{class_question_a744a3ad85f20a5ecefe701fe985726e7}} 
+\index{Question@{Question}!Question@{Question}}
+\index{Question@{Question}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{Question()}{Question()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Question\+::\+Question (\begin{DoxyParamCaption}\item[{std\+::string}]{title,  }\item[{std\+::string}]{content,  }\item[{int}]{asker }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_a2e1167d0407c7530b4f7a7492d0050d0}\label{class_question_a2e1167d0407c7530b4f7a7492d0050d0}} 
+\index{Question@{Question}!Question@{Question}}
+\index{Question@{Question}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{Question()}{Question()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Question\+::\+Question (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_question_a0232f4758d6dfd792eca6c4efc0c4fd6}\label{class_question_a0232f4758d6dfd792eca6c4efc0c4fd6}} 
+\index{Question@{Question}!addComment@{addComment}}
+\index{addComment@{addComment}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{addComment()}{addComment()}}
+{\footnotesize\ttfamily void Question\+::add\+Comment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_comment}{Comment}}}]{comment }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00109}{109}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_a6af81c3184b6b893e4e94e73ef47909f}\label{class_question_a6af81c3184b6b893e4e94e73ef47909f}} 
+\index{Question@{Question}!deleteComment@{deleteComment}}
+\index{deleteComment@{deleteComment}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{deleteComment()}{deleteComment()}}
+{\footnotesize\ttfamily void Question\+::delete\+Comment (\begin{DoxyParamCaption}\item[{int}]{comment\+Id,  }\item[{\mbox{\hyperlink{class_user}{User}} \&}]{author }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00114}{114}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_ae4114296ddb091c67fa8d38f5d8d5894}\label{class_question_ae4114296ddb091c67fa8d38f5d8d5894}} 
+\index{Question@{Question}!downvoteComment@{downvoteComment}}
+\index{downvoteComment@{downvoteComment}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{downvoteComment()}{downvoteComment()}}
+{\footnotesize\ttfamily void Question\+::downvote\+Comment (\begin{DoxyParamCaption}\item[{int}]{comment\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_aeee3e50b3b4919f21a96e6d6e5219b80}\label{class_question_aeee3e50b3b4919f21a96e6d6e5219b80}} 
+\index{Question@{Question}!findCommentIndex@{findCommentIndex}}
+\index{findCommentIndex@{findCommentIndex}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{findCommentIndex()}{findCommentIndex()}}
+{\footnotesize\ttfamily int Question\+::find\+Comment\+Index (\begin{DoxyParamCaption}\item[{int}]{comment\+Id }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_a55a06e7ed8aa9468ae8edccdbf995e7f}\label{class_question_a55a06e7ed8aa9468ae8edccdbf995e7f}} 
+\index{Question@{Question}!getComment@{getComment}}
+\index{getComment@{getComment}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{getComment()}{getComment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_comment}{Comment}} Question\+::get\+Comment (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_a1c22c4e4a21f8e9d8298255f2e2afa20}\label{class_question_a1c22c4e4a21f8e9d8298255f2e2afa20}} 
+\index{Question@{Question}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily std\+::string Question\+::get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_a711f632a0eb2446feff15f61428aefea}\label{class_question_a711f632a0eb2446feff15f61428aefea}} 
+\index{Question@{Question}!getUniqueQ@{getUniqueQ}}
+\index{getUniqueQ@{getUniqueQ}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{getUniqueQ()}{getUniqueQ()}}
+{\footnotesize\ttfamily int Question\+::get\+UniqueQ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_ac285ea35f8d10be8c1759c11a0d621e4}\label{class_question_ac285ea35f8d10be8c1759c11a0d621e4}} 
+\index{Question@{Question}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily void Question\+::read\+From\+File (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{file }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_a1680a8dfef011dcf971b56ab302b3164}\label{class_question_a1680a8dfef011dcf971b56ab302b3164}} 
+\index{Question@{Question}!show@{show}}
+\index{show@{show}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Question\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_aaaa0b076b10234aad6c0b059d84ca35a}\label{class_question_aaaa0b076b10234aad6c0b059d84ca35a}} 
+\index{Question@{Question}!showComments@{showComments}}
+\index{showComments@{showComments}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{showComments()}{showComments()}}
+{\footnotesize\ttfamily void Question\+::show\+Comments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_ae4c08d09b63e7909e7d89b1ddc7aeb8a}\label{class_question_ae4c08d09b63e7909e7d89b1ddc7aeb8a}} 
+\index{Question@{Question}!upvoteComment@{upvoteComment}}
+\index{upvoteComment@{upvoteComment}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{upvoteComment()}{upvoteComment()}}
+{\footnotesize\ttfamily void Question\+::upvote\+Comment (\begin{DoxyParamCaption}\item[{int}]{comment\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+\mbox{\Hypertarget{class_question_a23b6b06d419a0dbb87b3ab041d190c51}\label{class_question_a23b6b06d419a0dbb87b3ab041d190c51}} 
+\index{Question@{Question}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}}
+{\footnotesize\ttfamily void Question\+::write\+To\+File (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{file }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_question_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{_question_8cpp_source}{Question.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hp/\+Desktop/\+Social\+Network/\+Social\+Network/Question.\+h\item 
+C\+:/\+Users/hp/\+Desktop/\+Social\+Network/\+Social\+Network/Question.\+cpp\end{DoxyCompactItemize}

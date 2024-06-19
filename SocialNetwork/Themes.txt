@@ -1,0 +1,34 @@
+2
+Theme 1: Programming languages
+Question: What is your favorite programming language?
+Comment 1 Java
+Reply 1 Mine too!
+Comment 2 C++ of course
+
+Question: How long have you been coding?
+Comment 1 for a year
+
+Theme: Technology preferences
+Question: Do you prefer frontend or backend development?
+Comment 1 frontend
+Reply 1 why?
+reply 2 it is funnier
+Comment 2 both. I am fullstack
+
+Theme: Books
+Question: What is your favorite book?
+Comment 1 Harry Potter
+Reply 1 Lame
+
+Question: Who is your favorite author?
+Comment 1 Tolstoy
+Comment 2 Tolkin, are you kidding me?
+
+Theme: Travel
+Question: What is your dream travel destination?
+Comment 1 Paris
+Reply 1 Let's travel together!
+
+Question: Have you been to any countries in Asia?
+Comment 1 No
+Comment 2 Yes, I was in China!

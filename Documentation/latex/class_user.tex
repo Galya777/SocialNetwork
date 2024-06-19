@@ -1,0 +1,356 @@
+\hypertarget{class_user}{}\doxysection{User Class Reference}
+\label{class_user}\index{User@{User}}
+Inheritance diagram for User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_user}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_a3d5fb99f5f64fa0e520b8c4300819bc7}{User}} (const std\+::string first\+Name, const std\+::string last\+Name, const std\+::string user\+Name, const std\+::string password, bool is\+Admin=false)
+\item 
+virtual void \mbox{\hyperlink{class_user_a6d1ac7664ff98c312ea53e9064b4c997}{edit\+User}} (\mbox{\hyperlink{class_user}{User}} \&user, int user\+ID=0)
+\item 
+void \mbox{\hyperlink{class_user_aa8543a8e8b5e559277477c8c4cfdaa6f}{set\+First\+Name}} (const std\+::string first\+Name)
+\item 
+void \mbox{\hyperlink{class_user_a739f0e30485da966a4535e1223ba8745}{set\+Last\+Name}} (const std\+::string last\+Name)
+\item 
+void \mbox{\hyperlink{class_user_a988227e1b937b093c864f5b10e1e3986}{set\+User\+Name}} (const std\+::string user\+Name)
+\item 
+void \mbox{\hyperlink{class_user_ac3544d3457d10ea27da89f500d37c5b7}{set\+Password}} (const std\+::string password)
+\item 
+void \mbox{\hyperlink{class_user_aec19fb94aeffe0bdf8f4cab3db17e61e}{set\+Points}} (int point)
+\item 
+std\+::string \mbox{\hyperlink{class_user_a463e55083ef4bdab95a05716991bf30c}{getfirst\+Name}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_user_a667b135674f6b61d250b541b3133903a}{getlast\+Name}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_user_a6640f46ab703ea81fb050828f528e451}{getuser\+Name}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_user_ace83809468650178dde5f46b8b322ef2}{getpassword}} () const
+\item 
+double \mbox{\hyperlink{class_user_a25e74c2b0aa7ab2cf70c44c0ba8b3c05}{get\+Points}} () const
+\item 
+int \mbox{\hyperlink{class_user_afd5eaa855f85fc92ea51c0d1e0565d62}{get\+User\+ID}} () const
+\item 
+void \mbox{\hyperlink{class_user_a6a8e6d66493932704efd01e004bf6905}{read\+From\+File}} (std\+::fstream \&file)
+\item 
+void \mbox{\hyperlink{class_user_a492bd57ac9ba1ad9dae06263911d7565}{write\+To\+File}} (std\+::fstream \&file) const
+\item 
+bool \mbox{\hyperlink{class_user_a07cb0358e55c3d80e240c21bb4134f84}{is\+User\+Admin}} () const
+\item 
+void \mbox{\hyperlink{class_user_a2505fce7de4df4155bbe840eb60d149f}{set\+Is\+Moderator}} (\mbox{\hyperlink{class_user}{User}} changer, bool is\+Moderator)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_user_aa845739b31aaf9d2e7bdedf829447191}{first\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{class_user_a10abe0efedb0a600a7be16593a448b12}{last\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{class_user_aa4b0e6b11e45dd1329738430a8904ff9}{user\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}}
+\item 
+int \mbox{\hyperlink{class_user_a40e0f98ffc56f9a04cdd1fff160ffd07}{unique}}
+\item 
+double \mbox{\hyperlink{class_user_a8f1319a6a90704fe655467b6837830f0}{points}}
+\item 
+bool \mbox{\hyperlink{class_user_a1d5fb52bb2b27ad9f642827bc628ccea}{loged}}
+\item 
+bool \mbox{\hyperlink{class_user_aa6f97f01f2b981aa9119727521959857}{is\+Admin}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_user_8h_source_l00011}{11}} of file \mbox{\hyperlink{_user_8h_source}{User.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_user_a3d5fb99f5f64fa0e520b8c4300819bc7}\label{class_user_a3d5fb99f5f64fa0e520b8c4300819bc7}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{const std\+::string}]{first\+Name,  }\item[{const std\+::string}]{last\+Name,  }\item[{const std\+::string}]{user\+Name,  }\item[{const std\+::string}]{password,  }\item[{bool}]{is\+Admin = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a4a0137053e591fbb79d9057dd7d2283d}\label{class_user_a4a0137053e591fbb79d9057dd7d2283d}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a7d1cf7c22ba031caec015ec427419513}\label{class_user_a7d1cf7c22ba031caec015ec427419513}} 
+\index{User@{User}!````~User@{$\sim$User}}
+\index{````~User@{$\sim$User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{$\sim$User()}{~User()}}
+{\footnotesize\ttfamily virtual User\+::$\sim$\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8h_source_l00017}{17}} of file \mbox{\hyperlink{_user_8h_source}{User.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_a6d1ac7664ff98c312ea53e9064b4c997}\label{class_user_a6d1ac7664ff98c312ea53e9064b4c997}} 
+\index{User@{User}!editUser@{editUser}}
+\index{editUser@{editUser}!User@{User}}
+\doxysubsubsection{\texorpdfstring{editUser()}{editUser()}}
+{\footnotesize\ttfamily void User\+::edit\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}} \&}]{user,  }\item[{int}]{user\+ID = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a463e55083ef4bdab95a05716991bf30c}\label{class_user_a463e55083ef4bdab95a05716991bf30c}} 
+\index{User@{User}!getfirstName@{getfirstName}}
+\index{getfirstName@{getfirstName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getfirstName()}{getfirstName()}}
+{\footnotesize\ttfamily std\+::string User\+::getfirst\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a667b135674f6b61d250b541b3133903a}\label{class_user_a667b135674f6b61d250b541b3133903a}} 
+\index{User@{User}!getlastName@{getlastName}}
+\index{getlastName@{getlastName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getlastName()}{getlastName()}}
+{\footnotesize\ttfamily std\+::string User\+::getlast\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_ace83809468650178dde5f46b8b322ef2}\label{class_user_ace83809468650178dde5f46b8b322ef2}} 
+\index{User@{User}!getpassword@{getpassword}}
+\index{getpassword@{getpassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getpassword()}{getpassword()}}
+{\footnotesize\ttfamily std\+::string User\+::getpassword (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a25e74c2b0aa7ab2cf70c44c0ba8b3c05}\label{class_user_a25e74c2b0aa7ab2cf70c44c0ba8b3c05}} 
+\index{User@{User}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getPoints()}{getPoints()}}
+{\footnotesize\ttfamily double User\+::get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_afd5eaa855f85fc92ea51c0d1e0565d62}\label{class_user_afd5eaa855f85fc92ea51c0d1e0565d62}} 
+\index{User@{User}!getUserID@{getUserID}}
+\index{getUserID@{getUserID}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUserID()}{getUserID()}}
+{\footnotesize\ttfamily int User\+::get\+User\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a6640f46ab703ea81fb050828f528e451}\label{class_user_a6640f46ab703ea81fb050828f528e451}} 
+\index{User@{User}!getuserName@{getuserName}}
+\index{getuserName@{getuserName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getuserName()}{getuserName()}}
+{\footnotesize\ttfamily std\+::string User\+::getuser\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a07cb0358e55c3d80e240c21bb4134f84}\label{class_user_a07cb0358e55c3d80e240c21bb4134f84}} 
+\index{User@{User}!isUserAdmin@{isUserAdmin}}
+\index{isUserAdmin@{isUserAdmin}!User@{User}}
+\doxysubsubsection{\texorpdfstring{isUserAdmin()}{isUserAdmin()}}
+{\footnotesize\ttfamily bool User\+::is\+User\+Admin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a6a8e6d66493932704efd01e004bf6905}\label{class_user_a6a8e6d66493932704efd01e004bf6905}} 
+\index{User@{User}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!User@{User}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily void User\+::read\+From\+File (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{file }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_aa8543a8e8b5e559277477c8c4cfdaa6f}\label{class_user_aa8543a8e8b5e559277477c8c4cfdaa6f}} 
+\index{User@{User}!setFirstName@{setFirstName}}
+\index{setFirstName@{setFirstName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setFirstName()}{setFirstName()}}
+{\footnotesize\ttfamily void User\+::set\+First\+Name (\begin{DoxyParamCaption}\item[{const std\+::string}]{first\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a2505fce7de4df4155bbe840eb60d149f}\label{class_user_a2505fce7de4df4155bbe840eb60d149f}} 
+\index{User@{User}!setIsModerator@{setIsModerator}}
+\index{setIsModerator@{setIsModerator}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setIsModerator()}{setIsModerator()}}
+{\footnotesize\ttfamily void User\+::set\+Is\+Moderator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}}}]{changer,  }\item[{bool}]{is\+Moderator }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a739f0e30485da966a4535e1223ba8745}\label{class_user_a739f0e30485da966a4535e1223ba8745}} 
+\index{User@{User}!setLastName@{setLastName}}
+\index{setLastName@{setLastName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setLastName()}{setLastName()}}
+{\footnotesize\ttfamily void User\+::set\+Last\+Name (\begin{DoxyParamCaption}\item[{const std\+::string}]{last\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_ac3544d3457d10ea27da89f500d37c5b7}\label{class_user_ac3544d3457d10ea27da89f500d37c5b7}} 
+\index{User@{User}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily void User\+::set\+Password (\begin{DoxyParamCaption}\item[{const std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00135}{135}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_aec19fb94aeffe0bdf8f4cab3db17e61e}\label{class_user_aec19fb94aeffe0bdf8f4cab3db17e61e}} 
+\index{User@{User}!setPoints@{setPoints}}
+\index{setPoints@{setPoints}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setPoints()}{setPoints()}}
+{\footnotesize\ttfamily void User\+::set\+Points (\begin{DoxyParamCaption}\item[{int}]{point }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00140}{140}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a988227e1b937b093c864f5b10e1e3986}\label{class_user_a988227e1b937b093c864f5b10e1e3986}} 
+\index{User@{User}!setUserName@{setUserName}}
+\index{setUserName@{setUserName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setUserName()}{setUserName()}}
+{\footnotesize\ttfamily void User\+::set\+User\+Name (\begin{DoxyParamCaption}\item[{const std\+::string}]{user\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00130}{130}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+\mbox{\Hypertarget{class_user_a492bd57ac9ba1ad9dae06263911d7565}\label{class_user_a492bd57ac9ba1ad9dae06263911d7565}} 
+\index{User@{User}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!User@{User}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}}
+{\footnotesize\ttfamily void User\+::write\+To\+File (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{file }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{_user_8cpp_source}{User.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_user_aa845739b31aaf9d2e7bdedf829447191}\label{class_user_aa845739b31aaf9d2e7bdedf829447191}} 
+\index{User@{User}!firstName@{firstName}}
+\index{firstName@{firstName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{firstName}{firstName}}
+{\footnotesize\ttfamily std\+::string User\+::first\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8h_source_l00052}{52}} of file \mbox{\hyperlink{_user_8h_source}{User.\+h}}.
+
+\mbox{\Hypertarget{class_user_aa6f97f01f2b981aa9119727521959857}\label{class_user_aa6f97f01f2b981aa9119727521959857}} 
+\index{User@{User}!isAdmin@{isAdmin}}
+\index{isAdmin@{isAdmin}!User@{User}}
+\doxysubsubsection{\texorpdfstring{isAdmin}{isAdmin}}
+{\footnotesize\ttfamily bool User\+::is\+Admin\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8h_source_l00060}{60}} of file \mbox{\hyperlink{_user_8h_source}{User.\+h}}.
+
+\mbox{\Hypertarget{class_user_a10abe0efedb0a600a7be16593a448b12}\label{class_user_a10abe0efedb0a600a7be16593a448b12}} 
+\index{User@{User}!lastName@{lastName}}
+\index{lastName@{lastName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{lastName}{lastName}}
+{\footnotesize\ttfamily std\+::string User\+::last\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8h_source_l00053}{53}} of file \mbox{\hyperlink{_user_8h_source}{User.\+h}}.
+
+\mbox{\Hypertarget{class_user_a1d5fb52bb2b27ad9f642827bc628ccea}\label{class_user_a1d5fb52bb2b27ad9f642827bc628ccea}} 
+\index{User@{User}!loged@{loged}}
+\index{loged@{loged}!User@{User}}
+\doxysubsubsection{\texorpdfstring{loged}{loged}}
+{\footnotesize\ttfamily bool User\+::loged\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8h_source_l00059}{59}} of file \mbox{\hyperlink{_user_8h_source}{User.\+h}}.
+
+\mbox{\Hypertarget{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}\label{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}} 
+\index{User@{User}!password@{password}}
+\index{password@{password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily std\+::string User\+::password\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8h_source_l00055}{55}} of file \mbox{\hyperlink{_user_8h_source}{User.\+h}}.
+
+\mbox{\Hypertarget{class_user_a8f1319a6a90704fe655467b6837830f0}\label{class_user_a8f1319a6a90704fe655467b6837830f0}} 
+\index{User@{User}!points@{points}}
+\index{points@{points}!User@{User}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily double User\+::points\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8h_source_l00057}{57}} of file \mbox{\hyperlink{_user_8h_source}{User.\+h}}.
+
+\mbox{\Hypertarget{class_user_a40e0f98ffc56f9a04cdd1fff160ffd07}\label{class_user_a40e0f98ffc56f9a04cdd1fff160ffd07}} 
+\index{User@{User}!unique@{unique}}
+\index{unique@{unique}!User@{User}}
+\doxysubsubsection{\texorpdfstring{unique}{unique}}
+{\footnotesize\ttfamily int User\+::unique\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8h_source_l00056}{56}} of file \mbox{\hyperlink{_user_8h_source}{User.\+h}}.
+
+\mbox{\Hypertarget{class_user_aa4b0e6b11e45dd1329738430a8904ff9}\label{class_user_aa4b0e6b11e45dd1329738430a8904ff9}} 
+\index{User@{User}!userName@{userName}}
+\index{userName@{userName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{userName}{userName}}
+{\footnotesize\ttfamily std\+::string User\+::user\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_8h_source_l00054}{54}} of file \mbox{\hyperlink{_user_8h_source}{User.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hp/\+Desktop/\+Social\+Network/\+Social\+Network/User.\+h\item 
+C\+:/\+Users/hp/\+Desktop/\+Social\+Network/\+Social\+Network/User.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{_question_8cpp_source}{}\doxysection{Question.\+cpp}
+\label{_question_8cpp_source}\index{C:/Users/hp/Desktop/SocialNetwork/SocialNetwork/Question.cpp@{C:/Users/hp/Desktop/SocialNetwork/SocialNetwork/Question.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}Question.h"{}}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00003}00003 \textcolor{keywordtype}{void} Question::upvoteComment(\textcolor{keywordtype}{int} commentId)}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00005}00005     \textcolor{keywordtype}{int} index = findCommentIndex(commentId);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00006}00006     \textcolor{keywordflow}{if} (index != -\/1) \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00007}00007         comments[index].setGrade(comments[index].getGrade()+1);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00008}00008         comments[index].getAuthor().setPoints(comments[index].getAuthor().getPoints() + 1);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00009}00009     \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00010}00010     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00011}00011         std::cout << \textcolor{stringliteral}{"{}Comment is not excisting!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00012}00012     \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00013}00013 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00015}00015 \textcolor{keywordtype}{void} Question::downvoteComment(\textcolor{keywordtype}{int} commentId)}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00017}00017     \textcolor{keywordtype}{int} index = findCommentIndex(commentId);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00018}00018     \textcolor{keywordflow}{if} (index != -\/1) \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00019}00019         comments[index].setGrade(comments[index].getGrade() -\/ 1);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00020}00020         comments[index].getAuthor().setPoints(comments[index].getAuthor().getPoints()-\/1);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00021}00021     \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00022}00022     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00023}00023         std::cout << \textcolor{stringliteral}{"{}Comment is not excisting!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00024}00024     \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00025}00025 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00027}00027 std::string Question::getTitle()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00028}00028 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00029}00029     \textcolor{keywordflow}{return} title;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00030}00030 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00032}00032 \textcolor{keywordtype}{int} Question::getUniqueQ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00033}00033 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00034}00034     \textcolor{keywordflow}{return} uniqueQ;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00035}00035 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00037}00037 \mbox{\hyperlink{class_comment}{Comment}} Question::getComment(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00038}00038 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00039}00039     \textcolor{keywordflow}{return} \textcolor{keywordtype}{id}<comments.size()?comments[id]:\textcolor{keywordflow}{throw}(\textcolor{stringliteral}{"{}Comment not excisting!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00040}00040 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00042}00042 \textcolor{keywordtype}{void} Question::show()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00043}00043 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00044}00044     std::cout << \textcolor{stringliteral}{"{}Title: "{}} << title << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00045}00045     std::cout << \textcolor{stringliteral}{"{}Content: "{}} << content << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00046}00046     std::cout << \textcolor{stringliteral}{"{}Number of comments: "{}} << comments.size() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00047}00047 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00049}00049 \textcolor{keywordtype}{void} Question::showComments()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00050}00050 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00051}00051     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < comments.size(); ++i) \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00052}00052         comments[i].print();}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00053}00053         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00054}00054     \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00055}00055 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00057}00057 \textcolor{keywordtype}{void} Question::readFromFile(std::fstream\& file)}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00058}00058 \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00059}00059     file >>  uniqueQ >> title >> content >> asker;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00060}00060     \mbox{\hyperlink{class_comment}{Comment}} comment;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00061}00061     std::string line;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00062}00062     \textcolor{keywordtype}{size\_t} pos;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00063}00063     \textcolor{keywordflow}{while} (getline(file, line)) \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00064}00064         pos = line.find(\textcolor{stringliteral}{"{}Question"{}});}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00065}00065         \textcolor{keywordflow}{if} (pos != std::string::npos) \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00066}00066             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00067}00067         \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00068}00068         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00069}00069             comment.readFromFile(file);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00070}00070             comments.push\_back(comment);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00071}00071         \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00073}00073 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00075}00075 \textcolor{keywordtype}{void} Question::writeToFile(std::fstream\& file)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00076}00076 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00077}00077     file << \textcolor{stringliteral}{"{}Question "{}} << uniqueQ << \textcolor{stringliteral}{"{}: "{}} << title << \textcolor{stringliteral}{"{} "{}} << content << \textcolor{stringliteral}{"{} "{}} << asker;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00078}00078     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < comments.size(); i++)}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00079}00079     \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00080}00080         comments[i].writeToFile(file);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00081}00081         file << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00082}00082     \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00083}00083 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00085}00085 \textcolor{keywordtype}{int} Question::findCommentIndex(\textcolor{keywordtype}{int} commentId)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00086}00086 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00087}00087     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < comments.size(); ++i) \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00088}00088         \textcolor{keywordflow}{if} (comments[i].getId() == commentId) \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00089}00089             \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00090}00090         \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00091}00091     \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00092}00092     \textcolor{keywordflow}{return} -\/1; \textcolor{comment}{// not found}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00093}00093 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00095}00095 Question::Question(std::string title, std::string content, \textcolor{keywordtype}{int} asker)}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00096}00096 \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00097}00097     this-\/>title = title;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00098}00098     this-\/>content = content;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00099}00099     this-\/>asker = asker;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00100}00100     this-\/>uniqueQ = QID;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00101}00101     QID++;}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00102}00102 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00104}00104 Question::Question()}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00105}00105 \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00107}00107 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00109}00109 \textcolor{keywordtype}{void} Question::addComment(\mbox{\hyperlink{class_comment}{Comment}} comment)}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00110}00110 \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00111}00111     comments.push\_back(comment);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00112}00112 \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00114}00114 \textcolor{keywordtype}{void} Question::deleteComment(\textcolor{keywordtype}{int} commentId, \mbox{\hyperlink{class_user}{User}}\& author)}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00115}00115 \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00116}00116     \textcolor{keywordtype}{int} index = findCommentIndex(commentId);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00117}00117     \textcolor{keywordflow}{if} (index != -\/1 \&\& (comments[index].getAuthor().getuserName() == author.getuserName() || author.isUserAdmin())) \{}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00118}00118         comments.erase(comments.begin() + index);}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00119}00119     \}}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00120}00120     std::cout << \textcolor{stringliteral}{"{}You have no permission to delete this comment!\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_question_8cpp_source_l00121}00121 \}}
+
+\end{DoxyCode}
