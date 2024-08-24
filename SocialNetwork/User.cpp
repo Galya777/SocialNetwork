@@ -1,5 +1,7 @@
 #include "User.h"
 
+int User::THIS_ID = 0;
+
 std::string User::getfirstName() const
 {
     return firstName;
@@ -33,13 +35,11 @@ int User::getUserID() const
 void User::readFromFile(std::fstream& file)
 {
     file >> firstName >> lastName >> userName >> password>>points >> isAdmin;
-    //file.read((char*)userName.c_str(), sizeof(userName));
-    //file.read((char*)password.c_str(), sizeof(password));
     this->unique = THIS_ID;
     THIS_ID++;
 }
 
-void User::writeToFile(std::fstream& file) const
+void User::writeToFile(std::fstream& file) 
 {
     file << firstName << "  " << lastName<<" " << userName<<" " << password<< " " << isAdmin;
 }
@@ -59,7 +59,7 @@ void User::setIsModerator(User changer, bool isModerator)
     }
 }
 
-User::User(std::string firstName, std::string lastName, std::string userName, std::string password, bool isAdmin)
+User::User(const std::string& firstName, const std::string& lastName, const std::string& userName, const std::string& password, bool isAdmin)
 {
     setFirstName(firstName);
     setLastName(lastName);
@@ -119,22 +119,22 @@ void User::editUser(User& user, int userID)
     
 }
 
-void User::setFirstName(std::string firstName)
+void User::setFirstName(const std::string& firstName)
 {
     this->firstName = firstName;
 }
 
-void User::setLastName(std::string lastName)
+void User::setLastName(const std::string& lastName)
 {
     this->lastName = lastName;
 }
 
-void User::setUserName(std::string userName)
+void User::setUserName(const std::string& userName)
 {
     this->userName = userName;
 }
 
-void User::setPassword(std::string password)
+void User::setPassword(const std::string& password)
 {
     this->password = password;
 }

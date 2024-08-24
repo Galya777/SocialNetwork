@@ -1,6 +1,6 @@
 #include "Comment.h"
-
-Comment::Comment(User& author, std::string text): author(author)
+int Comment::QU = 0;
+Comment::Comment(User& author, const std::string& text): author(author)
 {
 	this->grade = 0;
 	this->text = text;
@@ -71,7 +71,15 @@ void Comment::readFromFile(std::fstream& file)
 {
 	file >> uniqueComment;
 	author.readFromFile(file);
-	file>> text >>grade;
+	char ch;           
+	// Read character by character
+	while (file.get(ch)) {
+		if (ch == ',') {  // Check if the character is a comma
+			break;        // Exit the loop if a comma is found
+		}
+		text += ch;     // Append character to the result string
+	}
+	file>> grade;
 	Comment comment;
 	std::string line;
 	size_t pos;

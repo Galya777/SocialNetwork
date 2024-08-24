@@ -91,8 +91,7 @@ void Commands::save() {
         std::cout << "No file is currently open." << std::endl;
         return;
     }
-    std::ofstream File(file);
-    if (File.is_open()) {
+    if (newFile.is_open()) {
         for (size_t i = 0; i < users.size(); i++)
         {
             users.at(i).writeToFile(newFile);
@@ -102,7 +101,7 @@ void Commands::save() {
             themes.at(i).writeToFile(newFile);
         }
         std::cout << "Successfully saved " << file << std::endl;
-        File.close();
+        newFile.close();
     }
     else {
         std::cout << "Failed to save file " << file << std::endl;

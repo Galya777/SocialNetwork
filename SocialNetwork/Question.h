@@ -2,11 +2,11 @@
 #include "Comment.h"
 #include <vector>
 #include <string>
-static int QID = 0;
+
 class Question
 {
 public:
-	Question(std::string title, std::string content, int asker);
+	Question(const std::string& title, const std::string& content, int asker);
 	Question();
 
 	void addComment(Comment comment);
@@ -26,7 +26,7 @@ public:
 	void showComments() const;
 
 	void readFromFile(std::fstream& file);
-	void writeToFile(std::fstream& file) const;
+	void writeToFile(std::fstream& file);
 
 	int findCommentIndex(int commentId) const;
 
@@ -38,6 +38,6 @@ private:
 	int asker;
 	int uniqueQ;
 
-	
+	static int QID;
 };
 

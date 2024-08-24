@@ -1,6 +1,6 @@
 #include "Admin.h"
 
-Admin::Admin(std::string firstName, std::string lastName, std::string userName, std::string password, bool isAdmin)
+Admin::Admin(const std::string& firstName, const std::string& lastName, const std::string& userName, const std::string& password, bool isAdmin)
 {
     setFirstName(firstName);
     setLastName(lastName);

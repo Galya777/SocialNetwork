@@ -1,5 +1,5 @@
 #include "Question.h"
-
+int Question::QID = 0;
 void Question::upvoteComment(int commentId)
 {
     int index = findCommentIndex(commentId);
@@ -56,7 +56,24 @@ void Question::showComments() const
 
 void Question::readFromFile(std::fstream& file)
 {
-    file >>  uniqueQ >> title >> content >> asker;
+    file >> uniqueQ;
+    char cht, chc;             // Variable to store each character read from the file
+
+    // Read character by character
+    while (file.get(cht)) {
+        if (cht == ',') {  // Check if the character is a comma
+            break;        // Exit the loop if a comma is found
+        }
+        title += cht;     // Append character to the result string
+    }
+
+    while (file.get(chc)) {
+        if (chc == ',') {  // Check if the character is a comma
+            break;        // Exit the loop if a comma is found
+        }
+        content += chc;     // Append character to the result string
+    }
+    file >> asker;
     Comment comment;
     std::string line;
     size_t pos;
@@ -72,7 +89,7 @@ void Question::readFromFile(std::fstream& file)
     }
 }
 
-void Question::writeToFile(std::fstream& file) const
+void Question::writeToFile(std::fstream& file)
 {
     file << "Question " << uniqueQ << ": " << title << " " << content << " " << asker;
     for (size_t i = 0; i < comments.size(); i++)
@@ -92,7 +109,7 @@ int Question::findCommentIndex(int commentId) const
     return -1; // not found
 }
 
-Question::Question(std::string title, std::string content, int asker)
+Question::Question(const std::string& title, const std::string& content, int asker)
 {
     this->title = title;
     this->content = content;

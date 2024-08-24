@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-static int THIS_ID = 0;
+
 //Instead of dynamic casting, I use virtual polimorphism because otherwise I do not have a chance to have refferences and default values
 //I found two solutions to this problem: 
 // 1. polymorphism and virtual functions
@@ -11,7 +11,7 @@ static int THIS_ID = 0;
 class User
 {
 public:
-	User(const std::string firstName, const std::string lastName, const std::string userName, const std::string password, bool isAdmin = false);
+	User(const std::string& firstName, const std::string& lastName, const std::string& userName, const std::string& password, bool isAdmin = false);
 	User();
 
 	virtual ~User() {}
@@ -20,10 +20,10 @@ public:
 	
 
 	//setters
-	void setFirstName(const std::string firstName);
-	void setLastName( const std::string lastName);
-	void setUserName( const std::string userName);
-	void setPassword( const std::string password);
+	void setFirstName(const std::string& firstName);
+	void setLastName( const std::string& lastName);
+	void setUserName( const std::string& userName);
+	void setPassword( const std::string& password);
 	void setPoints(int point);
 
 	//getters
@@ -35,11 +35,11 @@ public:
 	int getUserID() const;
 
 	void readFromFile(std::fstream& file);
-	void writeToFile(std::fstream& file) const;
+	void writeToFile(std::fstream& file);
 
 	bool isUserAdmin() const;
 
-	//this function askes for the changer of the status 
+	//this function asks for the changer of the status 
 	//the reason for this is only admins can change roles
 	//we do not want random users touch user rights
 	//being protected, the Admin class has not the access to access it
@@ -59,6 +59,6 @@ protected:
 	bool loged;
 	bool isAdmin;
 
-	
+	static int THIS_ID;
 };
 

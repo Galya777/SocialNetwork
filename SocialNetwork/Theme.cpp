@@ -1,7 +1,7 @@
 #include "Theme.h"
 #include <iostream>
-
-Theme::Theme(std::string title, int userID, std::string description)
+int Theme::THIS_IDT = 0;
+Theme::Theme(const std::string& title, int userID, const std::string& description)
 {
 	setTitle(title);
 	this->uniqueID = THIS_IDT;
@@ -35,12 +35,12 @@ Question Theme::getQuestion(int id) const
 	return id < questions.size() ? questions[id] : throw("Question not excisting!\n");
 }
 
-void Theme::setTitle(std::string title)
+void Theme::setTitle(const std::string& title)
 {
 	this->title = title;
 }
 
-void Theme::setDescription(std::string description)
+void Theme::setDescription(const std::string& description)
 {
 	this->description = description;
 }
@@ -63,7 +63,23 @@ void Theme::removeQuestion(Question question)
 
 void Theme::readFromFile(std::fstream& file)
 {
-	file >> userID >> title >> userID >> description;
+	file >> userID;
+	char cht, chd;             // Variable to store each character read from the file
+	// Read character by character
+	while (file.get(cht)) {
+		if (cht == ',') {  // Check if the character is a comma
+			break;        // Exit the loop if a comma is found
+		}
+		title += cht;     // Append character to the result string
+	}
+	file >> userID;
+	// Read character by character
+	while (file.get(chd)) {
+		if (chd == ',') {  // Check if the character is a comma
+			break;        // Exit the loop if a comma is found
+		}
+		description += chd;     // Append character to the result string
+	}
 	//find a way to read the questions
 	Question question;
 	std::string line;
@@ -80,7 +96,7 @@ void Theme::readFromFile(std::fstream& file)
 	}
 }
 
-void Theme::writeToFile(std::fstream& file) const
+void Theme::writeToFile(std::fstream& file) 
 {
 	file << "Theme "<<uniqueID << ": " << title << " " << userID << " " << description;
 	for (size_t i = 0; i < questions.size(); i++)

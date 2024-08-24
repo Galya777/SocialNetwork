@@ -2,11 +2,11 @@
 #include <string>
 #include <vector>
 #include "Question.h"
-static int THIS_IDT = 0;
+
 class Theme
 {
 public:
-	Theme(std::string title, int userID, std::string description);
+	Theme(const std::string& title, int userID, const std::string& description);
 	Theme();
 
 	//getters
@@ -16,14 +16,14 @@ public:
 	Question getQuestion(int id) const;
 
 	//setters
-	void setTitle(std::string title);
-	void setDescription(std::string description);
+	void setTitle(const std::string& title);
+	void setDescription(const std::string& description);
 
 	void addQuestion(Question question);
 	void removeQuestion(Question question);
 
 	void readFromFile(std::fstream& file);
-	void writeToFile(std::fstream& file) const;
+	void writeToFile(std::fstream& file);
 
 	void printQuestions();
 
@@ -38,5 +38,7 @@ private:
 
 	bool findQuestion(std::string title);
 	int getQuestionId(std::string title);
+
+	static int THIS_IDT;
 };
 

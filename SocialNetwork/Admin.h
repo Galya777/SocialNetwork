@@ -3,7 +3,7 @@
 class Admin: public User
 {
 public:
-	Admin(std::string firstName, std::string lastName, std::string userName, std::string password, bool isAdmin=true);
+	Admin(const std::string& firstName, const std::string& lastName, const std::string& userName, const std::string& password, bool isAdmin =true);
     void editUser(User& user, int userID=0) override;
 	
 private:
